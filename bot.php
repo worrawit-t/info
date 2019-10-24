@@ -1,7 +1,7 @@
 <?php
  require("pub.php");
  require("line.php");
-
+console_log("--------------------------------------------------");
 // Get POST body content
 $content = file_get_contents('php://input');
 // Parse JSON
