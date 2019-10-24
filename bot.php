@@ -1,7 +1,7 @@
 <?php
  require("pub.php");
  require("line.php");
-console_log("--------------------------------------------------");
+
 // Get POST body content
 $content = file_get_contents('php://input');
 // Parse JSON
@@ -9,13 +9,12 @@ $content = file_get_contents('php://input');
 $events = json_decode($content, true);
 // Validate parsed JSON data
 if (!is_null($events['ESP'])) {
-	echo("!is_null($events[ESP])");
+	
 	send_LINE($events['ESP']);
 		
 	echo "OK";
 	}
 if (!is_null($events['events'])) {
-	echo("!is_null($events[events])");
 	echo "line bot";
 	// Loop through each event
 	foreach ($events['events'] as $event) {
