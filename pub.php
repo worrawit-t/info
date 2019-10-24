@@ -3,9 +3,9 @@
        $APPID= "DeviceIOT/"; //enter your appid
      $KEY = "b8dnfPg5QtYPcaF"; //enter your key
     $SECRET = "dYIyZeFfDvaqaEpIvd9lbZ2nD"; //enter your secret
-    $Topic = "$API"; 
+    $Topic = "$topic"; 
       put("https://api.netpie.io/microgear/".$APPID.$Topic."?retain&auth=".$KEY.":".$SECRET,$msg);
- 
+      console_log("https://api.netpie.io/microgear/".$APPID.$Topic."?retain&auth=".$KEY.":".$SECRET,$msg);
   }
  function getMqttfromlineMsg($Topic,$lineMsg){
  
